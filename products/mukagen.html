@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>MUKAGEN — Caelus Industries</title>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">Caelus Industries</a>
+    <div class="nav-links">
+      <a href="../page.html">Product</a>
+      <a href="../journal.html">Journal</a>
+      <a href="../about.html">About</a>
+      <a href="../careers.html">Careers</a>
+      <a href="../contact.html" class="nav-cta">Get started</a>
+    </div>
+    <div class="nav-mobile">
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero" style="padding-bottom:40px">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content">
+    <div class="page-tag" style="display:flex;align-items:center;gap:12px">
+      <a href="../page.html" style="color:var(--muted);font-family:var(--font-mono);font-size:12px;letter-spacing:0.1em;text-decoration:none">Products</a>
+      <span style="color:var(--muted)">·</span>
+      <span>4 min read</span>
+    </div>
+    <h1 class="page-title" style="margin-top:16px">MUKAGEN</h1>
+    <p class="page-subtitle">Modular Counter-UAS Weapon Station</p>
+  </div>
+</div>
+
+<!-- HERO IMAGE -->
+<div class="product-hero-img" data-placeholder="PRODUCT RENDER / PHOTOGRAPH"></div>
+
+<!-- TABS -->
+<div style="max-width:1240px;margin:0 auto;padding:0 40px">
+  <div class="product-tabs">
+    <button class="tab-btn active" onclick="showTab('features',this)">KEY FEATURES</button>
+    <button class="tab-btn" onclick="showTab('specs',this)">SPECIFICATIONS</button>
+    <button class="tab-btn" onclick="showTab('configs',this)">CONFIGURATIONS</button>
+    <button class="tab-btn" onclick="showTab('deployment',this)">DEPLOYMENT</button>
+    <button class="tab-btn" onclick="showTab('mounting',this)">MOUNTING OPTIONS</button>
+  </div>
+
+  <div id="tab-features" class="tab-content active">
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="feature-title">Multi-sensor fusion</div>
+        <p class="feature-body">Integrates radar (EV-TINYRAD24G), electro-optical tracking, and VLM-based classification into a unified threat picture. Placeholder — add real feature description.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title">Edge-deployed AI</div>
+        <p class="feature-body">Runs fully offline on Jetson Orin NX. No cloud dependencies, no latency from remote inference. Placeholder — add real feature description.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title">Modular effector interface</div>
+        <p class="feature-body">Weapon station supports interchangeable effector payloads. Placeholder — add real feature description.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title">3-axis pan/tilt/roll gimbal</div>
+        <p class="feature-body">High-precision gimbal control for continuous target tracking in dynamic environments. Placeholder — add real feature description.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="tab-specs" class="tab-content">
+    <div class="specs-grid">
+      <div class="spec-item"><div class="spec-label">PLATFORM</div><div class="spec-value">Jetson Orin NX</div></div>
+      <div class="spec-item"><div class="spec-label">RADAR</div><div class="spec-value">EV-TINYRAD24G</div></div>
+      <div class="spec-item"><div class="spec-label">TRACKING MODEL</div><div class="spec-value">YOLOv8n ONNX</div></div>
+      <div class="spec-item"><div class="spec-label">CLASSIFIER</div><div class="spec-value">Florence-2</div></div>
+      <div class="spec-item"><div class="spec-label">FUSION</div><div class="spec-value">EKF</div></div>
+      <div class="spec-item"><div class="spec-label">GIMBAL AXES</div><div class="spec-value">3 (pan/tilt/roll)</div></div>
+      <div class="spec-item"><div class="spec-label">CONNECTIVITY</div><div class="spec-value">Offline / Edge</div></div>
+      <div class="spec-item"><div class="spec-label">WEIGHT</div><div class="spec-value">Placeholder</div></div>
+    </div>
+  </div>
+
+  <div id="tab-configs" class="tab-content">
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="feature-title">Configuration A — Placeholder</div>
+        <p class="feature-body">Description of this configuration variant. Replace with actual configuration details.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title">Configuration B — Placeholder</div>
+        <p class="feature-body">Description of this configuration variant. Replace with actual configuration details.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="tab-deployment" class="tab-content">
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="feature-title">Deployment scenario placeholder</div>
+        <p class="feature-body">Describe the intended deployment context, environment, and operational workflow. Add real content here.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="tab-mounting" class="tab-content">
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="feature-title">Mounting option placeholder</div>
+        <p class="feature-body">Describe mounting configurations, hardware interfaces, and compatible platforms. Add real content here.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="height:80px"></div>
+
+<aside class="cta-aside">
+  <h4>Interested in MUKAGEN?</h4>
+  <a href="../contact.html" class="btn-dark">
+    <span style="width:4px;height:4px;border-radius:50%;background:#fff"></span>
+    Request a demo
+  </a>
+</aside>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="mukagen.html">MUKAGEN</a>
+        <a href="yemoja-susv.html">YEMOJA sUSV</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+      <div class="footer-social">
+        <a href="#">LinkedIn</a>
+        <a href="#">X (Twitter)</a>
+        <a href="mailto:contact@caelusindustries.com">contact@caelusindustries.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 · All rights reserved</div>
+  </div>
+</footer>
+
+<script>
+function showTab(id, btn) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
