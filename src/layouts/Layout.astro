@@ -1,0 +1,60 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>{title}</title>
+  {description && <meta name="description" content={description}/>}
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Caelus Industries</a>
+    <div class="nav-links">
+      <a href="/products">Product</a>
+      <a href="/journal">Journal</a>
+      <a href="/about">About</a>
+      <a href="/careers">Careers</a>
+      <a href="/contact" class="nav-cta">Get started</a>
+    </div>
+    <div class="nav-mobile">
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+
+<slot />
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/products/mukagen">MUKAGEN</a>
+        <a href="/products/yemoja-susv">YEMOJA sUSV</a>
+        <a href="/products/condor">Condor</a>
+        <a href="/contact">Contact</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://x.com" target="_blank" rel="noopener">X (Twitter)</a>
+        <a href="mailto:contact@caelusindustries.com?subject=Inquiry%20%E2%80%94%20Caelus%20Industries">contact@caelusindustries.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 · All rights reserved</div>
+  </div>
+</footer>
+
+</body>
+</html>

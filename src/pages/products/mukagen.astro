@@ -1,0 +1,124 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="MUKAGEN — Caelus Industries">
+
+<!-- HERO IMAGE WITH TITLE OVERLAY -->
+<div style="position:relative;width:100%;margin-top:60px;">
+  <img src="/images/mukagen.png" alt="MUKAGEN" style="width:100%;height:auto;display:block;"/>
+  <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.1) 100%);"></div>
+  <div style="position:absolute;bottom:0;left:0;right:0;padding:48px 40px;max-width:1240px;margin:0 auto;">
+    <div class="page-tag" style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+      <a href="/products" style="color:var(--muted);font-family:var(--font-mono);font-size:12px;letter-spacing:0.1em;text-decoration:none">Products</a>
+      <span style="color:var(--muted)">·</span>
+      <span style="color:var(--muted);font-family:var(--font-mono);font-size:12px;">4 min read</span>
+    </div>
+    <h1 class="page-title">MUKAGEN</h1>
+    <p class="page-subtitle">Modular Counter-UAS Weapon Station</p>
+  </div>
+</div>
+
+<!-- TABS -->
+<div style="max-width:1240px;margin:0 auto;padding:0 40px">
+  <div class="product-tabs">
+    <button class="tab-btn active" onclick="showTab('features',this)">KEY FEATURES</button>
+    <button class="tab-btn" onclick="showTab('specs',this)">SPECIFICATIONS</button>
+    <button class="tab-btn" onclick="showTab('configs',this)">CONFIGURATIONS</button>
+    <button class="tab-btn" onclick="showTab('deployment',this)">DEPLOYMENT</button>
+    <button class="tab-btn" onclick="showTab('mounting',this)">MOUNTING OPTIONS</button>
+  </div>
+
+  <div id="tab-features" class="tab-content active">
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="feature-title">Multi-sensor fusion</div>
+        <p class="feature-body">The EV-TINYRAD24G 24GHz FMCW radar handles initial acquisition, providing range, velocity, and bearing on inbound targets before the camera ever activates. YOLOv8n confirms the visual track; Florence-2 classifies threat type and behavior. An Extended Kalman Filter fuses all three streams into a single continuously updated threat picture — eliminating the false positives that trip single-sensor systems.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title">Edge-deployed AI</div>
+        <p class="feature-body">All inference runs on the Jetson Orin NX — no cloud calls, no network dependency, no added latency. YOLOv8n runs TensorRT INT8-quantized for sub-millisecond detection; Florence-2 handles threat classification entirely on-device. Mukagen operates in GPS-denied and comms-denied environments without degradation.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title">Modular effector interface</div>
+        <p class="feature-body">The weapon station exposes a standardized payload interface, allowing operators to configure RF jamming, directed energy, or kinetic effectors without hardware redesign. Effector engagement is gated behind deterministic, rule-based threat confirmation — every engagement decision is auditable and reproducible.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title">3-axis pan/tilt/roll gimbal</div>
+        <p class="feature-body">Full pan/tilt/roll articulation enables continuous target lock across azimuth, elevation, and roll — maintaining track through aggressive target maneuvers and platform vibration. High-resolution servo control minimizes settling time during intercept handoff.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="tab-specs" class="tab-content">
+    <div class="specs-grid">
+      <div class="spec-item"><div class="spec-label">PLATFORM</div><div class="spec-value">Jetson Orin NX</div></div>
+      <div class="spec-item"><div class="spec-label">RADAR</div><div class="spec-value">EV-TINYRAD24G</div></div>
+      <div class="spec-item"><div class="spec-label">TRACKING MODEL</div><div class="spec-value">YOLOv8n ONNX</div></div>
+      <div class="spec-item"><div class="spec-label">CLASSIFIER</div><div class="spec-value">Florence-2</div></div>
+      <div class="spec-item"><div class="spec-label">FUSION</div><div class="spec-value">EKF</div></div>
+      <div class="spec-item"><div class="spec-label">GIMBAL AXES</div><div class="spec-value">3 (pan/tilt/roll)</div></div>
+      <div class="spec-item"><div class="spec-label">CONNECTIVITY</div><div class="spec-value">Offline / Edge</div></div>
+      <div class="spec-item"><div class="spec-label">WEIGHT</div><div class="spec-value">~4.2 kg</div></div>
+    </div>
+  </div>
+
+  <div id="tab-configs" class="tab-content">
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="feature-title">Configuration A — Fixed-Site Defense</div>
+        <p class="feature-body">Optimized for perimeter hardening of static assets. Deployed on ground mounts or rooftop hardpoints with 360° radar sweep and sector-based EO tracking. Supports continuous unattended operation; operator intervention required only at fire authorization.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title">Configuration B — Vehicle-Mounted</div>
+        <p class="feature-body">Compact form factor for integration on light tactical vehicles. Rail-mount interface supports rapid forward deployment and redeployment. Full system capability retained in mobile configuration with no software changes required.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="tab-deployment" class="tab-content">
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="feature-title">Operational deployment</div>
+        <p class="feature-body">Mukagen initializes autonomously and achieves full radar coverage within seconds of power-on. No network connectivity required at any stage of operation. Threat tracks surface through the Argus GCS with operator-in-the-loop authorization before any effector command is issued. Designed for base perimeter defense, VIP protection zones, and forward operating base hardening.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="tab-mounting" class="tab-content">
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="feature-title">Ground tripod</div>
+        <p class="feature-body">Portable standalone deployment on level terrain. Fully self-contained with no external power or structure required.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title">Vehicle rail mount</div>
+        <p class="feature-body">NATO STANAG-compatible roof bracket for integration on light tactical vehicles. Rapid forward deployment and redeployment without tooling.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title">Fixed hardpoint</div>
+        <p class="feature-body">Structural bolt pattern for permanent installation on concrete or steel structure. Intended for long-duration perimeter defense of static assets.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="height:80px"></div>
+
+<aside class="cta-aside">
+  <h4>Interested in MUKAGEN?</h4>
+  <a href="/contact" class="btn-dark">
+    <span style="width:4px;height:4px;border-radius:50%;background:#fff"></span>
+    Request a demo
+  </a>
+</aside>
+
+<script is:inline>
+function showTab(id, btn) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+
+</Layout>
