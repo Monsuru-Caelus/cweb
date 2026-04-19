@@ -16,33 +16,35 @@ import Layout from '../layouts/Layout.astro';
 
 <div class="content-section" style="display:flex;gap:80px;flex-wrap:wrap;align-items:flex-start">
   <div style="flex:1;min-width:280px">
-    <form class="contact-form" onsubmit="return false">
+    <form class="contact-form" id="contact-form">
       <div class="form-row">
         <div class="form-group">
           <label class="form-label">FIRST NAME</label>
-          <input class="form-input" type="text" placeholder="John"/>
+          <input class="form-input" type="text" name="firstName" placeholder="John" required/>
         </div>
         <div class="form-group">
           <label class="form-label">LAST NAME</label>
-          <input class="form-input" type="text" placeholder="Smith"/>
+          <input class="form-input" type="text" name="lastName" placeholder="Smith" required/>
         </div>
       </div>
       <div class="form-group">
         <label class="form-label">EMAIL</label>
-        <input class="form-input" type="email" placeholder="john@organization.gov"/>
+        <input class="form-input" type="email" name="email" placeholder="john@organization.gov" required/>
       </div>
       <div class="form-group">
         <label class="form-label">ORGANIZATION</label>
-        <input class="form-input" type="text" placeholder="Agency / Company"/>
+        <input class="form-input" type="text" name="organization" placeholder="Agency / Company"/>
       </div>
       <div class="form-group">
         <label class="form-label">MESSAGE</label>
-        <textarea class="form-textarea" placeholder="Tell us about your use case..."></textarea>
+        <textarea class="form-textarea" name="message" placeholder="Tell us about your use case..." required></textarea>
       </div>
-      <button type="submit" class="btn-primary" style="align-self:flex-start">
+      <button type="submit" class="btn-primary" id="submit-btn" style="align-self:flex-start">
         <span class="btn-dot"></span>
-        Send message
+        <span id="submit-label">Send message</span>
       </button>
+      <p id="form-success" style="display:none;font-family:var(--font-mono);font-size:13px;color:rgba(255,255,255,0.6);margin-top:8px;">Message sent — we'll be in touch shortly.</p>
+      <p id="form-error" style="display:none;font-family:var(--font-mono);font-size:13px;color:rgba(255,80,80,0.8);margin-top:8px;">Something went wrong. Please try again or email us directly.</p>
     </form>
   </div>
   <div style="flex-shrink:0;width:280px;display:flex;flex-direction:column;gap:32px;padding-top:8px">
@@ -59,5 +61,42 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </div>
 </div>
+
+<script is:inline>
+  document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const btn = document.getElementById('submit-btn');
+    const label = document.getElementById('submit-label');
+    const success = document.getElementById('form-success');
+    const error = document.getElementById('form-error');
+
+    btn.disabled = true;
+    label.textContent = 'Sending...';
+    success.style.display = 'none';
+    error.style.display = 'none';
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        body: new FormData(this),
+      });
+
+      const json = await res.json();
+
+      if (res.ok && json.success) {
+        success.style.display = 'block';
+        this.reset();
+      } else {
+        error.style.display = 'block';
+      }
+    } catch {
+      error.style.display = 'block';
+    } finally {
+      btn.disabled = false;
+      label.textContent = 'Send message';
+    }
+  });
+</script>
 
 </Layout>
