@@ -4,17 +4,61 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  ogImage?: string;
 }
 
-const { title, description } = Astro.props;
+const {
+  title,
+  description = 'Caelus Industries builds autonomous maritime and counter-UAS systems for nations that refuse to be outgunned.',
+  ogImage = '/images/og-default.jpeg',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(ogImage, Astro.site);
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="canonical" href={canonicalURL}/>
+
+  <!-- Primary -->
   <title>{title}</title>
-  {description && <meta name="description" content={description}/>}
+  <meta name="description" content={description}/>
+  <meta name="robots" content="index, follow"/>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Caelus Industries"/>
+  <meta property="og:url" content={canonicalURL}/>
+  <meta property="og:title" content={title}/>
+  <meta property="og:description" content={description}/>
+  <meta property="og:image" content={ogImageURL}/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content={title}/>
+  <meta name="twitter:description" content={description}/>
+  <meta name="twitter:image" content={ogImageURL}/>
+
+  <!-- JSON-LD Organization -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Caelus Industries",
+    "url": "https://caelusindustries.com",
+    "logo": "https://caelusindustries.com/images/og-default.jpeg",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "contact@caelusindustries.com",
+      "contactType": "general"
+    },
+    "sameAs": [
+      "https://linkedin.com",
+      "https://x.com"
+    ]
+  })}/>
 </head>
 <body>
 
