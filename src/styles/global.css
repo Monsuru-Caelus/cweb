@@ -426,6 +426,10 @@ footer {
   padding: 4px 10px; border-radius: 20px;
   margin-top: 12px; display: inline-block;
 }
+.article-body p { margin-bottom: 1.5em; }
+.article-body p:last-child { margin-bottom: 0; }
+.article-body h2 { margin-top: 2.5em; margin-bottom: 0.75em; }
+
 .subscribe-bar {
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.1);
