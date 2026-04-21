@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://caelusindustries.com/sitemap-index.xml
