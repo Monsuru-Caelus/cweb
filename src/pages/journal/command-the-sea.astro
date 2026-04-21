@@ -2,6 +2,19 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 <Layout title="Command the Sea, Command the World — Caelus Journal" description="Africa's 13 million square kilometers of ocean lose $25B annually to maritime insecurity. Monsuru Anifowose on why autonomous surface vessels are the answer." ogImage="/images/journal/command-the-sea.png">
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Command the Sea, Command the World: Africa's 13 Million Square Kilometer Vision",
+    "description": "Africa's 13 million square kilometers of ocean lose $25B annually to maritime insecurity. Monsuru Anifowose on why autonomous surface vessels are the answer.",
+    "datePublished": "2025-05-04",
+    "image": "https://caelusindustries.com/images/journal/command-the-sea.png",
+    "author": { "@type": "Person", "name": "Monsuru Anifowose", "jobTitle": "CEO, Caelus Industries" },
+    "publisher": { "@type": "Organization", "name": "Caelus Industries", "url": "https://caelusindustries.com" },
+    "url": "https://caelusindustries.com/journal/command-the-sea",
+    "mainEntityOfPage": "https://caelusindustries.com/journal/command-the-sea"
+  })}/>
+</Layout>
 
 <div class="page-hero">
   <div class="page-hero-bg"></div>
@@ -20,7 +33,7 @@ import Layout from '../../layouts/Layout.astro';
 
 <div class="content-section">
   <div style="max-width:680px;margin:0 auto">
-    <img src="/images/journal/command-the-sea.png" alt="Command the Sea, Command the World" style="width:100%;height:auto;display:block;border-radius:4px;margin-bottom:48px;"/>
+    <img src="/images/journal/command-the-sea.png" alt="Command the Sea, Command the World" loading="lazy" style="width:100%;height:auto;display:block;border-radius:4px;margin-bottom:48px;"/>
   </div>
   <div class="article-body" style="max-width:680px;margin:0 auto;font-family:var(--font-body);font-size:17px;line-height:1.8;color:rgba(255,255,255,0.85)">
 

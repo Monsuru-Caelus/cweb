@@ -2,6 +2,17 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 <Layout title="Condor — Caelus Industries" description="Condor is a loitering strike munition with 60km range, Mach 1 terminal velocity, hybrid guidance, and dual ordnance capacity for precision engagement." ogImage="/images/condor_preview.jpeg">
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Condor",
+    "description": "Loitering strike munition with 60km range, Mach 1 terminal velocity, hybrid guidance, and dual ordnance capacity for precision engagement.",
+    "image": "https://caelusindustries.com/images/condor_preview.jpeg",
+    "brand": { "@type": "Organization", "name": "Caelus Industries" },
+    "url": "https://caelusindustries.com/products/condor",
+    "category": "Loitering Munition / Strike Drone"
+  })}/>
+</Layout>
 
 <!-- HERO IMAGE WITH TITLE OVERLAY -->
 <div style="position:relative;width:100%;margin-top:60px;">

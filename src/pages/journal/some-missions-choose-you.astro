@@ -2,6 +2,18 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 <Layout title="Some Missions Choose You — Caelus Journal" description="Monsuru Anifowose on founding Caelus Industries, the geopolitics of ocean control, and building the slingshot for nations that refuse to be outgunned.">
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Some Missions Choose You.",
+    "description": "Monsuru Anifowose on founding Caelus Industries, the geopolitics of ocean control, and building the slingshot for nations that refuse to be outgunned.",
+    "datePublished": "2025-10-14",
+    "author": { "@type": "Person", "name": "Monsuru Anifowose", "jobTitle": "CEO, Caelus Industries" },
+    "publisher": { "@type": "Organization", "name": "Caelus Industries", "url": "https://caelusindustries.com" },
+    "url": "https://caelusindustries.com/journal/some-missions-choose-you",
+    "mainEntityOfPage": "https://caelusindustries.com/journal/some-missions-choose-you"
+  })}/>
+</Layout>
 
 <div class="page-hero">
   <div class="page-hero-bg"></div>

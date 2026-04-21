@@ -2,6 +2,18 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 <Layout title="You Have Three Souls. So Does AI. — Caelus Journal" description="Consciousness isn't one smart thing — it's three incompatible systems in constant tension. Monsuru Anifowose on what this means for AI design.">
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "You Have Three Souls. So Does AI.",
+    "description": "Consciousness isn't one smart thing — it's three incompatible systems in constant tension. Monsuru Anifowose on what this means for AI design.",
+    "datePublished": "2026-02-05",
+    "author": { "@type": "Person", "name": "Monsuru Anifowose", "jobTitle": "CEO, Caelus Industries" },
+    "publisher": { "@type": "Organization", "name": "Caelus Industries", "url": "https://caelusindustries.com" },
+    "url": "https://caelusindustries.com/journal/three-souls",
+    "mainEntityOfPage": "https://caelusindustries.com/journal/three-souls"
+  })}/>
+</Layout>
 
 <div class="page-hero">
   <div class="page-hero-bg"></div>
