@@ -2,7 +2,15 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 <Layout title="Condor — Caelus Industries" description="Condor is a loitering strike munition with 60km range, Mach 1 terminal velocity, hybrid guidance, and dual ordnance capacity for precision engagement." ogImage="/images/condor_preview.jpeg">
-  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify([{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://caelusindustries.com" },
+      { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://caelusindustries.com/products" },
+      { "@type": "ListItem", "position": 3, "name": "Condor", "item": "https://caelusindustries.com/products/condor" }
+    ]
+  }, {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Condor",
@@ -11,7 +19,7 @@ import Layout from '../../layouts/Layout.astro';
     "brand": { "@type": "Organization", "name": "Caelus Industries" },
     "url": "https://caelusindustries.com/products/condor",
     "category": "Loitering Munition / Strike Drone"
-  })}/>
+  }])}/>
 </Layout>
 
 <!-- HERO IMAGE WITH TITLE OVERLAY -->

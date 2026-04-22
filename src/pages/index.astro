@@ -2,9 +2,16 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout
-  title="Caelus Industries"
+  title="Caelus Industries — Autonomous Maritime & Counter-UAS Defense Systems"
   description="Caelus Industries builds autonomous platforms for counter-UAS, maritime patrol, and multi-domain threat detection in high-stakes environments."
 >
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Caelus Industries",
+    "url": "https://caelusindustries.com",
+    "description": "Autonomous maritime and counter-UAS defense systems for sovereign nations."
+  })}/>
 
 <!-- HERO -->
 <section class="hero">

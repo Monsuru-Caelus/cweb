@@ -2,6 +2,47 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="Careers — Caelus Industries" description="Join Caelus Industries. We're hiring engineers and builders who want to work on autonomous maritime and counter-UAS systems that matter.">
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://caelusindustries.com" },
+        { "@type": "ListItem", "position": 2, "name": "Careers", "item": "https://caelusindustries.com/careers" }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "JobPosting",
+      "title": "Embedded Systems Engineer",
+      "description": "Build the firmware and sensor fusion pipelines that power our autonomous platforms. Experience with RTOS, SLAM, and edge AI inference preferred.",
+      "hiringOrganization": { "@type": "Organization", "name": "Caelus Industries", "sameAs": "https://caelusindustries.com" },
+      "jobLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "San Francisco", "addressRegion": "CA", "addressCountry": "US" } },
+      "employmentType": "FULL_TIME",
+      "datePosted": "2026-01-01"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "JobPosting",
+      "title": "ML / Computer Vision Engineer",
+      "description": "Develop and deploy perception models for real-time threat detection. Work spans from training pipelines to edge deployment on Jetson hardware.",
+      "hiringOrganization": { "@type": "Organization", "name": "Caelus Industries", "sameAs": "https://caelusindustries.com" },
+      "jobLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "Remote", "addressCountry": "US" } },
+      "employmentType": "FULL_TIME",
+      "datePosted": "2026-01-01"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "JobPosting",
+      "title": "UX Designer",
+      "description": "Shape the interfaces that operators rely on in high-stakes environments. Lead cross-functional teams to build thoughtful, scalable solutions for defense-forward organizations.",
+      "hiringOrganization": { "@type": "Organization", "name": "Caelus Industries", "sameAs": "https://caelusindustries.com" },
+      "jobLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "San Francisco", "addressRegion": "CA", "addressCountry": "US" } },
+      "employmentType": "CONTRACTOR",
+      "datePosted": "2026-01-01"
+    }
+  ])}/>
+</Layout>
 
 <div class="page-hero">
   <div class="page-hero-bg"></div>

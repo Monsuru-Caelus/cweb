@@ -2,7 +2,15 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 <Layout title="YEMOJA sUSV — Caelus Industries" description="YEMOJA is an autonomous surface patrol vessel with 24-hour endurance, COLREGS-compliant navigation, and modular sensor payload for persistent maritime surveillance." ogImage="/images/yemoja_preview.jpeg">
-  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify([{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://caelusindustries.com" },
+      { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://caelusindustries.com/products" },
+      { "@type": "ListItem", "position": 3, "name": "YEMOJA sUSV", "item": "https://caelusindustries.com/products/yemoja-susv" }
+    ]
+  }, {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "YEMOJA sUSV",
@@ -11,7 +19,7 @@ import Layout from '../../layouts/Layout.astro';
     "brand": { "@type": "Organization", "name": "Caelus Industries" },
     "url": "https://caelusindustries.com/products/yemoja-susv",
     "category": "Autonomous Maritime Patrol / sUSV"
-  })}/>
+  }])}/>
 </Layout>
 
 <!-- HERO IMAGE WITH TITLE OVERLAY -->

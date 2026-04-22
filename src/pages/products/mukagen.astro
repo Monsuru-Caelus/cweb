@@ -2,7 +2,15 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 <Layout title="MUKAGEN — Caelus Industries" description="MUKAGEN is a modular counter-UAS weapon station with edge-deployed AI, multi-sensor fusion, and a 3-axis gimbal for autonomous drone intercept." ogImage="/images/mukagen_preview.png">
-  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify([{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://caelusindustries.com" },
+      { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://caelusindustries.com/products" },
+      { "@type": "ListItem", "position": 3, "name": "MUKAGEN", "item": "https://caelusindustries.com/products/mukagen" }
+    ]
+  }, {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "MUKAGEN",
@@ -11,7 +19,7 @@ import Layout from '../../layouts/Layout.astro';
     "brand": { "@type": "Organization", "name": "Caelus Industries" },
     "url": "https://caelusindustries.com/products/mukagen",
     "category": "Counter-UAS / Autonomous Weapon Station"
-  })}/>
+  }])}/>
 </Layout>
 
 <!-- HERO IMAGE WITH TITLE OVERLAY -->
