@@ -509,6 +509,30 @@ footer {
 
 /* ─── UTILITY ─── */
 .container { max-width: var(--max); margin: 0 auto; }
+
+/* Application modal */
+.apply-overlay {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(0,0,0,0.7);
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+}
+.apply-modal {
+  background: #0a0a0a; border: 1px solid rgba(255,255,255,0.1);
+  width: 100%; max-width: 520px; max-height: 90vh; overflow-y: auto;
+  padding: 40px;
+}
+.apply-modal-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 32px;
+}
+.apply-modal-title { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+.apply-close {
+  background: none; border: none; color: rgba(255,255,255,0.4);
+  font-size: 16px; cursor: pointer; padding: 4px; line-height: 1;
+}
+.apply-close:hover { color: var(--white); }
+.apply-form { display: flex; flex-direction: column; gap: 20px; }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: none; } }
 .divider { height: 1px; background: rgba(255,255,255,0.08); margin: 0 40px; }
 
