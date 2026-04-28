@@ -22,7 +22,7 @@ export const POST: APIRoute = async ({ request }) => {
 
   const { error } = await resend.emails.send({
     from: 'Caelus Contact Form <onboarding@resend.dev>',
-    to: 'meddybayed@gmail.com',
+    to: 'meddy@caelusindustries.com',
     replyTo: email,
     subject: `New inquiry from ${firstName} ${lastName}`,
     html: `
