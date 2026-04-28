@@ -19,30 +19,30 @@ export const POST: APIRoute = async ({ request }) => {
     });
   }
 
-  try {
-    await resend.emails.send({
-      from: 'Caelus Careers <onboarding@resend.dev>',
-      to: 'contact@caelusindustries.com',
-      replyTo: email,
-      subject: subject,
-      html: `
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Role:</strong> ${subject}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, '<br/>')}</p>
-      `,
-    });
+  const { error } = await resend.emails.send({
+    from: 'Caelus Careers <onboarding@resend.dev>',
+    to: 'meddybayed@gmail.com',
+    replyTo: email,
+    subject: subject,
+    html: `
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Role:</strong> ${subject}</p>
+      <p><strong>Message:</strong></p>
+      <p>${message.replace(/\n/g, '<br/>')}</p>
+    `,
+  });
 
-    return new Response(JSON.stringify({ success: true }), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' },
-    });
-  } catch (err) {
-    console.error('Resend error:', err);
-    return new Response(JSON.stringify({ error: 'Failed to send.' }), {
+  if (error) {
+    console.error('Resend error:', error);
+    return new Response(JSON.stringify({ error: error.message }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
     });
   }
+
+  return new Response(JSON.stringify({ success: true }), {
+    status: 200,
+    headers: { 'Content-Type': 'application/json' },
+  });
 };
