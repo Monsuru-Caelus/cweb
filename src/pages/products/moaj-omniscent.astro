@@ -1,37 +1,37 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 ---
-<Layout title="MOAJ-Omniscent — Caelus Industries" description="MOAJ-Omniscent is a multi-domain omnidirectional AI sensor fusion node delivering persistent, 360° battlespace awareness across land, sea, and air." ogImage="/images/og-default.jpeg">
+<Layout title="MOA-J — Caelus Industries" description="MOA-J is a hybrid air-water autonomous platform capable of seamless transitions between aerial, surface, and subsurface domains for extended-range reconnaissance." ogImage="/images/og-default.jpeg">
   <script slot="head" type="application/ld+json" set:html={JSON.stringify([{
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://caelusindustries.com" },
       { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://caelusindustries.com/products" },
-      { "@type": "ListItem", "position": 3, "name": "MOAJ-Omniscent", "item": "https://caelusindustries.com/products/moaj-omniscent" }
+      { "@type": "ListItem", "position": 3, "name": "MOA-J", "item": "https://caelusindustries.com/products/moaj-omniscent" }
     ]
   }, {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": "MOAJ-Omniscent",
-    "description": "Multi-domain omnidirectional AI sensor fusion node delivering persistent, 360° battlespace awareness across land, sea, and air.",
+    "name": "MOA-J",
+    "description": "Hybrid air-water autonomous platform capable of seamless transitions between aerial, surface, and subsurface domains for extended-range reconnaissance.",
     "brand": { "@type": "Organization", "name": "Caelus Industries" },
     "url": "https://caelusindustries.com/products/moaj-omniscent",
-    "category": "Multi-Domain Sensor Fusion / Battlespace Awareness"
+    "category": "Multi-Domain Autonomous Vehicle / Hybrid UAV-UUV"
   }])}/>
 </Layout>
 
 <!-- HERO IMAGE WITH TITLE OVERLAY -->
-<div style="position:relative;width:100%;margin-top:60px;background:#060610;min-height:480px;display:flex;align-items:flex-end;">
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%, rgba(30,40,80,0.7) 0%, rgba(0,0,0,0.95) 100%);"></div>
+<div style="position:relative;width:100%;margin-top:60px;background:#060d18;min-height:480px;display:flex;align-items:flex-end;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%, rgba(10,30,60,0.8) 0%, rgba(0,0,0,0.95) 100%);"></div>
   <div style="position:absolute;bottom:0;left:0;right:0;padding:48px 40px;max-width:1240px;margin:0 auto;">
     <div class="page-tag" style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
       <a href="/products" style="color:var(--muted);font-family:var(--font-mono);font-size:12px;letter-spacing:0.1em;text-decoration:none">Products</a>
       <span style="color:var(--muted)">·</span>
       <span style="color:var(--muted);font-family:var(--font-mono);font-size:12px;">5 min read</span>
     </div>
-    <h1 class="page-title">MOAJ-Omniscent</h1>
-    <p class="page-subtitle">Multi-Domain Omnidirectional Sensor Fusion Node</p>
+    <h1 class="page-title">MOA-J</h1>
+    <p class="page-subtitle">Multi-Domain Autonomous Reconnaissance Platform</p>
   </div>
 </div>
 
@@ -48,50 +48,52 @@ import Layout from '../../layouts/Layout.astro';
   <div id="tab-features" class="tab-content active">
     <div class="feature-list">
       <div class="feature-item">
-        <div class="feature-title">360° omnidirectional sensor coverage</div>
-        <p class="feature-body">MOAJ-Omniscent deploys a full-sphere sensor array — combining phased-array radar, wide-FOV EO/IR cameras, acoustic microphone clusters, and passive RF receivers — to eliminate blind spots across all azimuths and elevations. A single node delivers complete hemispheric coverage with no mechanical rotation required, enabling instantaneous response to threats from any approach vector.</p>
+        <div class="feature-title">Tri-domain operational envelope</div>
+        <p class="feature-body">MOA-J transitions seamlessly between aerial, surface, and subsurface domains without operator intervention. Folding wing-mounted propellers retract on water entry; a rear-mounted ducted motor provides underwater propulsion. Hydrofoil-assisted takeoff enables air-to-surface and surface-to-air transitions with minimal forward velocity requirement. Near-neutral buoyancy maintains stable subsurface operation down to 200m depth.</p>
       </div>
       <div class="feature-item">
-        <div class="feature-title">Multi-domain AI fusion engine</div>
-        <p class="feature-body">All sensor streams are ingested simultaneously into an on-device fusion engine running on the Jetson AGX Orin. A transformer-based multi-modal architecture correlates radar returns, visual detections, acoustic signatures, and RF emissions into unified target tracks. Cross-domain confirmation eliminates single-sensor false positives; novel threats flagged by one modality are immediately validated against all others within 80 ms.</p>
+        <div class="feature-title">Autonomous domain transition</div>
+        <p class="feature-body">Onboard Extended Kalman Filter fuses IMU, barometric, and depth sensor inputs to determine optimal transition timing. The platform executes water entry, surface transit, and aerial ascent autonomously — no operator input required post-mission-upload. Transition from submerged to airborne takes 8–12 seconds in nominal sea states.</p>
       </div>
       <div class="feature-item">
-        <div class="feature-title">Persistent battlespace memory</div>
-        <p class="feature-body">MOAJ-Omniscent maintains a continuously updated local operational picture with track histories extending up to 72 hours. Threat behavior patterns are analyzed over time, enabling predictive cueing — the system surfaces likely approach corridors before a target enters detection range. Historical track data is retained on-device with no external storage dependency.</p>
+        <div class="feature-title">Multi-modal communications</div>
+        <p class="feature-body">RF datalink (915 MHz / 2.4 GHz) provides real-time telemetry and command in aerial mode. Acoustic modem (12 kHz) enables subsurface control and positioning updates at reduced bandwidth. Mesh networking allows multi-platform coordination across mixed-domain swarms — aerial units relay commands to submerged assets.</p>
       </div>
       <div class="feature-item">
-        <div class="feature-title">Ecosystem-native tasking interface</div>
-        <p class="feature-body">Natively integrates with Argus GCS for operator visualization and cueing handoff to MUKAGEN and Condor. MOAJ-Omniscent can designate targets directly to paired effectors, closing the detect-to-engage loop without operator re-entry. Interoperable with NATO-standard data links and STANAG 4609 video output for integration into existing C2 architectures.</p>
+        <div class="feature-title">Extended endurance hybrid propulsion</div>
+        <p class="feature-body">Dual operational profiles: high-speed aerial transit at 100+ mph cruise, or low-power subsurface loiter extending mission duration to 6+ hours. Lithium-polymer battery pack optimized for power density; thermal management handles both air-cooled aerial flight and convection-limited underwater operation.</p>
       </div>
     </div>
   </div>
 
   <div id="tab-specs" class="tab-content">
     <div class="specs-grid">
-      <div class="spec-item"><div class="spec-label">PLATFORM</div><div class="spec-value">Jetson AGX Orin</div></div>
-      <div class="spec-item"><div class="spec-label">RADAR TYPE</div><div class="spec-value">Phased-array FMCW, 77 GHz</div></div>
-      <div class="spec-item"><div class="spec-label">RADAR COVERAGE</div><div class="spec-value">360° azimuth / 90° elevation</div></div>
-      <div class="spec-item"><div class="spec-label">EO/IR CAMERAS</div><div class="spec-value">6× wide-FOV, hemispherical mosaic</div></div>
-      <div class="spec-item"><div class="spec-label">ACOUSTIC ARRAY</div><div class="spec-value">8-element beamforming microphone</div></div>
-      <div class="spec-item"><div class="spec-label">FUSION LATENCY</div><div class="spec-value">&lt; 80 ms end-to-end</div></div>
-      <div class="spec-item"><div class="spec-label">TRACK RETENTION</div><div class="spec-value">72-hour local history</div></div>
-      <div class="spec-item"><div class="spec-label">CONNECTIVITY</div><div class="spec-value">Offline / Mesh / STANAG 4609</div></div>
+      <div class="spec-item"><div class="spec-label">LENGTH</div><div class="spec-value">~1.60 m</div></div>
+      <div class="spec-item"><div class="spec-label">WINGSPAN</div><div class="spec-value">~2.40 m (deployed)</div></div>
+      <div class="spec-item"><div class="spec-label">AIRFOIL</div><div class="spec-value">NACA 2412</div></div>
+      <div class="spec-item"><div class="spec-label">PROPULSION (AERIAL)</div><div class="spec-value">2× wing-mounted brushless + folding props</div></div>
+      <div class="spec-item"><div class="spec-label">PROPULSION (UNDERWATER)</div><div class="spec-value">1× rear ducted motor</div></div>
+      <div class="spec-item"><div class="spec-label">DEPTH RATING</div><div class="spec-value">200 m</div></div>
+      <div class="spec-item"><div class="spec-label">CRUISE SPEED (AIR)</div><div class="spec-value">100+ mph</div></div>
+      <div class="spec-item"><div class="spec-label">ENDURANCE</div><div class="spec-value">6+ hours (mixed-domain)</div></div>
+      <div class="spec-item"><div class="spec-label">COMMUNICATIONS</div><div class="spec-value">RF (air) / Acoustic (subsurface)</div></div>
+      <div class="spec-item"><div class="spec-label">AUTOPILOT</div><div class="spec-value">Custom flight controller + depth control</div></div>
     </div>
   </div>
 
   <div id="tab-configs" class="tab-content">
     <div class="feature-list">
       <div class="feature-item">
-        <div class="feature-title">Configuration A — Fixed perimeter node</div>
-        <p class="feature-body">Pole or rooftop-mounted for permanent installation at base perimeters, ports, and critical infrastructure. Continuous unattended operation with Argus GCS integration for operator situational awareness and cueing handoff. Supports networked multi-node deployment for layered coverage of large areas.</p>
+        <div class="feature-title">Configuration A — ISR patrol</div>
+        <p class="feature-body">Extended-duration reconnaissance missions across littoral zones. Aerial transit to area of interest, subsurface approach for covert observation, surface data exfiltration via RF uplink. Sensor payload: EO/IR camera, hydrophone array, environmental sensors.</p>
       </div>
       <div class="feature-item">
-        <div class="feature-title">Configuration B — Expeditionary forward node</div>
-        <p class="feature-body">Ruggedized transit case with integrated power and quick-deploy tripod mount. Full system operational within 15 minutes of arrival. Designed for forward operating base protection, convoy overwatch, and temporary site security. Battery-backed operation for 8 hours without external power.</p>
+        <div class="feature-title">Configuration B — Oceanographic survey</div>
+        <p class="feature-body">Scientific data collection in mixed coastal/offshore environments. Automated waypoint navigation across air-sea interface; depth-profiled water sampling and acoustic mapping. Supports multi-platform coordinated surveys with real-time data relay.</p>
       </div>
       <div class="feature-item">
-        <div class="feature-title">Configuration C — Maritime surface node</div>
-        <p class="feature-body">Sealed, corrosion-resistant enclosure rated for continuous maritime exposure. Mounts to vessel superstructure or fixed maritime infrastructure. Provides surface radar, aerial surveillance, and acoustic monitoring in a single integrated unit — replacing multiple legacy sensors with one fusion-native platform.</p>
+        <div class="feature-title">Configuration C — Swarm node</div>
+        <p class="feature-body">Network-enabled platform for distributed sensing and communication relay. Aerial units maintain RF mesh backbone; subsurface units extend coverage below surface. Autonomous handoff maintains network continuity through domain transitions.</p>
       </div>
     </div>
   </div>
@@ -100,7 +102,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="feature-list">
       <div class="feature-item">
         <div class="feature-title">Operational deployment</div>
-        <p class="feature-body">MOAJ-Omniscent initializes to full sensor coverage within 90 seconds of power-on. No calibration or alignment procedures required in the field — the sensor array is factory-aligned and maintains calibration over temperature. The system operates fully offline in GPS-denied environments, with optional mesh networking enabling multi-node coverage handoff without central infrastructure. Operator visibility into the fused track picture is available immediately through Argus GCS on first network contact.</p>
+        <p class="feature-body">MOA-J launches from a pneumatic tube or hand-launch for aerial deployment, or direct water insertion for subsurface start. Mission waypoints, depth profiles, and transition triggers are pre-programmed via ground control software. Once deployed, the platform operates fully autonomously — surfacing only for data exfiltration or operator-commanded abort. First full air-water-air transition demonstrated April 13, 2025. Subsurface endurance trials completed May 2025 with 200m depth validation. Swarm coordination testing (3+ units) ongoing as of Q1 2026.</p>
       </div>
     </div>
   </div>
@@ -108,16 +110,12 @@ import Layout from '../../layouts/Layout.astro';
   <div id="tab-integration" class="tab-content">
     <div class="feature-list">
       <div class="feature-item">
-        <div class="feature-title">MUKAGEN integration</div>
-        <p class="feature-body">MOAJ-Omniscent serves as the long-range acquisition layer for MUKAGEN weapon stations. Confirmed aerial tracks are passed directly to paired MUKAGEN units via encrypted local link, cueing the weapon station gimbal before the target enters MUKAGEN's own radar range — extending effective engagement envelope by 40%.</p>
-      </div>
-      <div class="feature-item">
-        <div class="feature-title">Condor integration</div>
-        <p class="feature-body">Pre-launch target designation for Condor strikes is accepted natively from MOAJ-Omniscent's track pipeline. Persistent track history enables pre-cued launches against targets in transit, reducing the time-from-detection-to-launch from minutes to under 30 seconds in a fully integrated configuration.</p>
+        <div class="feature-title">Argus GCS integration</div>
+        <p class="feature-body">Argus GCS provides mission planning, real-time telemetry visualization, and post-mission data review. Multi-platform coordination enables cueing handoff from MOA-J reconnaissance to MUKAGEN intercept or Condor strike engagement.</p>
       </div>
       <div class="feature-item">
         <div class="feature-title">Third-party C2 compatibility</div>
-        <p class="feature-body">STANAG 4609 KLV metadata output, NATO Link 16-compatible cueing messages, and a REST API for custom integration. MOAJ-Omniscent is designed to operate inside existing command architectures, not replace them — it adds fusion-native sensor coverage to whatever C2 environment the operator already uses.</p>
+        <p class="feature-body">Compatible with STANAG 4609 KLV metadata for integration into existing C2 architectures. REST API available for custom integration workflows. Supports NATO-standard data links for interoperability with joint operations environments.</p>
       </div>
     </div>
   </div>
@@ -126,7 +124,7 @@ import Layout from '../../layouts/Layout.astro';
 <div style="height:80px"></div>
 
 <aside class="cta-aside">
-  <h4>Interested in MOAJ-Omniscent?</h4>
+  <h4>Interested in MOA-J?</h4>
   <a href="/contact" class="btn-dark">
     <span style="width:4px;height:4px;border-radius:50%;background:#fff"></span>
     Request a demo
