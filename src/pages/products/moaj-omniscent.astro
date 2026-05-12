@@ -1,0 +1,145 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="MOAJ-Omniscent — Caelus Industries" description="MOAJ-Omniscent is a multi-domain omnidirectional AI sensor fusion node delivering persistent, 360° battlespace awareness across land, sea, and air." ogImage="/images/og-default.jpeg">
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify([{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://caelusindustries.com" },
+      { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://caelusindustries.com/products" },
+      { "@type": "ListItem", "position": 3, "name": "MOAJ-Omniscent", "item": "https://caelusindustries.com/products/moaj-omniscent" }
+    ]
+  }, {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "MOAJ-Omniscent",
+    "description": "Multi-domain omnidirectional AI sensor fusion node delivering persistent, 360° battlespace awareness across land, sea, and air.",
+    "brand": { "@type": "Organization", "name": "Caelus Industries" },
+    "url": "https://caelusindustries.com/products/moaj-omniscent",
+    "category": "Multi-Domain Sensor Fusion / Battlespace Awareness"
+  }])}/>
+</Layout>
+
+<!-- HERO IMAGE WITH TITLE OVERLAY -->
+<div style="position:relative;width:100%;margin-top:60px;background:#060610;min-height:480px;display:flex;align-items:flex-end;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%, rgba(30,40,80,0.7) 0%, rgba(0,0,0,0.95) 100%);"></div>
+  <div style="position:absolute;bottom:0;left:0;right:0;padding:48px 40px;max-width:1240px;margin:0 auto;">
+    <div class="page-tag" style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+      <a href="/products" style="color:var(--muted);font-family:var(--font-mono);font-size:12px;letter-spacing:0.1em;text-decoration:none">Products</a>
+      <span style="color:var(--muted)">·</span>
+      <span style="color:var(--muted);font-family:var(--font-mono);font-size:12px;">5 min read</span>
+    </div>
+    <h1 class="page-title">MOAJ-Omniscent</h1>
+    <p class="page-subtitle">Multi-Domain Omnidirectional Sensor Fusion Node</p>
+  </div>
+</div>
+
+<!-- TABS -->
+<div style="max-width:1240px;margin:0 auto;padding:0 40px">
+  <div class="product-tabs">
+    <button class="tab-btn active" onclick="showTab('features',this)">KEY FEATURES</button>
+    <button class="tab-btn" onclick="showTab('specs',this)">SPECIFICATIONS</button>
+    <button class="tab-btn" onclick="showTab('configs',this)">CONFIGURATIONS</button>
+    <button class="tab-btn" onclick="showTab('deployment',this)">DEPLOYMENT</button>
+    <button class="tab-btn" onclick="showTab('integration',this)">INTEGRATION</button>
+  </div>
+
+  <div id="tab-features" class="tab-content active">
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="feature-title">360° omnidirectional sensor coverage</div>
+        <p class="feature-body">MOAJ-Omniscent deploys a full-sphere sensor array — combining phased-array radar, wide-FOV EO/IR cameras, acoustic microphone clusters, and passive RF receivers — to eliminate blind spots across all azimuths and elevations. A single node delivers complete hemispheric coverage with no mechanical rotation required, enabling instantaneous response to threats from any approach vector.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title">Multi-domain AI fusion engine</div>
+        <p class="feature-body">All sensor streams are ingested simultaneously into an on-device fusion engine running on the Jetson AGX Orin. A transformer-based multi-modal architecture correlates radar returns, visual detections, acoustic signatures, and RF emissions into unified target tracks. Cross-domain confirmation eliminates single-sensor false positives; novel threats flagged by one modality are immediately validated against all others within 80 ms.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title">Persistent battlespace memory</div>
+        <p class="feature-body">MOAJ-Omniscent maintains a continuously updated local operational picture with track histories extending up to 72 hours. Threat behavior patterns are analyzed over time, enabling predictive cueing — the system surfaces likely approach corridors before a target enters detection range. Historical track data is retained on-device with no external storage dependency.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title">Ecosystem-native tasking interface</div>
+        <p class="feature-body">Natively integrates with Argus GCS for operator visualization and cueing handoff to MUKAGEN and Condor. MOAJ-Omniscent can designate targets directly to paired effectors, closing the detect-to-engage loop without operator re-entry. Interoperable with NATO-standard data links and STANAG 4609 video output for integration into existing C2 architectures.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="tab-specs" class="tab-content">
+    <div class="specs-grid">
+      <div class="spec-item"><div class="spec-label">PLATFORM</div><div class="spec-value">Jetson AGX Orin</div></div>
+      <div class="spec-item"><div class="spec-label">RADAR TYPE</div><div class="spec-value">Phased-array FMCW, 77 GHz</div></div>
+      <div class="spec-item"><div class="spec-label">RADAR COVERAGE</div><div class="spec-value">360° azimuth / 90° elevation</div></div>
+      <div class="spec-item"><div class="spec-label">EO/IR CAMERAS</div><div class="spec-value">6× wide-FOV, hemispherical mosaic</div></div>
+      <div class="spec-item"><div class="spec-label">ACOUSTIC ARRAY</div><div class="spec-value">8-element beamforming microphone</div></div>
+      <div class="spec-item"><div class="spec-label">FUSION LATENCY</div><div class="spec-value">&lt; 80 ms end-to-end</div></div>
+      <div class="spec-item"><div class="spec-label">TRACK RETENTION</div><div class="spec-value">72-hour local history</div></div>
+      <div class="spec-item"><div class="spec-label">CONNECTIVITY</div><div class="spec-value">Offline / Mesh / STANAG 4609</div></div>
+    </div>
+  </div>
+
+  <div id="tab-configs" class="tab-content">
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="feature-title">Configuration A — Fixed perimeter node</div>
+        <p class="feature-body">Pole or rooftop-mounted for permanent installation at base perimeters, ports, and critical infrastructure. Continuous unattended operation with Argus GCS integration for operator situational awareness and cueing handoff. Supports networked multi-node deployment for layered coverage of large areas.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title">Configuration B — Expeditionary forward node</div>
+        <p class="feature-body">Ruggedized transit case with integrated power and quick-deploy tripod mount. Full system operational within 15 minutes of arrival. Designed for forward operating base protection, convoy overwatch, and temporary site security. Battery-backed operation for 8 hours without external power.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title">Configuration C — Maritime surface node</div>
+        <p class="feature-body">Sealed, corrosion-resistant enclosure rated for continuous maritime exposure. Mounts to vessel superstructure or fixed maritime infrastructure. Provides surface radar, aerial surveillance, and acoustic monitoring in a single integrated unit — replacing multiple legacy sensors with one fusion-native platform.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="tab-deployment" class="tab-content">
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="feature-title">Operational deployment</div>
+        <p class="feature-body">MOAJ-Omniscent initializes to full sensor coverage within 90 seconds of power-on. No calibration or alignment procedures required in the field — the sensor array is factory-aligned and maintains calibration over temperature. The system operates fully offline in GPS-denied environments, with optional mesh networking enabling multi-node coverage handoff without central infrastructure. Operator visibility into the fused track picture is available immediately through Argus GCS on first network contact.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="tab-integration" class="tab-content">
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="feature-title">MUKAGEN integration</div>
+        <p class="feature-body">MOAJ-Omniscent serves as the long-range acquisition layer for MUKAGEN weapon stations. Confirmed aerial tracks are passed directly to paired MUKAGEN units via encrypted local link, cueing the weapon station gimbal before the target enters MUKAGEN's own radar range — extending effective engagement envelope by 40%.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title">Condor integration</div>
+        <p class="feature-body">Pre-launch target designation for Condor strikes is accepted natively from MOAJ-Omniscent's track pipeline. Persistent track history enables pre-cued launches against targets in transit, reducing the time-from-detection-to-launch from minutes to under 30 seconds in a fully integrated configuration.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title">Third-party C2 compatibility</div>
+        <p class="feature-body">STANAG 4609 KLV metadata output, NATO Link 16-compatible cueing messages, and a REST API for custom integration. MOAJ-Omniscent is designed to operate inside existing command architectures, not replace them — it adds fusion-native sensor coverage to whatever C2 environment the operator already uses.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="height:80px"></div>
+
+<aside class="cta-aside">
+  <h4>Interested in MOAJ-Omniscent?</h4>
+  <a href="/contact" class="btn-dark">
+    <span style="width:4px;height:4px;border-radius:50%;background:#fff"></span>
+    Request a demo
+  </a>
+</aside>
+
+<script is:inline>
+function showTab(id, btn) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+
+</Layout>
