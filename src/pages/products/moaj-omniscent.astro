@@ -49,7 +49,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="feature-list">
       <div class="feature-item">
         <div class="feature-title">Tri-domain operational envelope</div>
-        <p class="feature-body">MOA-J transitions seamlessly between aerial, surface, and subsurface domains without operator intervention. Folding wing-mounted propellers retract on water entry; a rear-mounted ducted motor provides underwater propulsion. Hydrofoil-assisted takeoff enables air-to-surface and surface-to-air transitions with minimal forward velocity requirement. Near-neutral buoyancy maintains stable subsurface operation down to 200m depth.</p>
+        <p class="feature-body">MOA-J transitions seamlessly between aerial, surface, and subsurface domains without operator intervention. Folding wing-mounted propellers retract on water entry; a rear-mounted ducted motor provides underwater propulsion. Hydrofoil-assisted takeoff enables air-to-surface and surface-to-air transitions with minimal forward velocity requirement. Near-neutral buoyancy maintains stable subsurface operation down to 500m depth.</p>
       </div>
       <div class="feature-item">
         <div class="feature-title">Autonomous domain transition</div>
@@ -73,11 +73,17 @@ import Layout from '../../layouts/Layout.astro';
       <div class="spec-item"><div class="spec-label">AIRFOIL</div><div class="spec-value">NACA 2412</div></div>
       <div class="spec-item"><div class="spec-label">PROPULSION (AERIAL)</div><div class="spec-value">2× wing-mounted brushless + folding props</div></div>
       <div class="spec-item"><div class="spec-label">PROPULSION (UNDERWATER)</div><div class="spec-value">1× rear ducted motor</div></div>
-      <div class="spec-item"><div class="spec-label">DEPTH RATING</div><div class="spec-value">200 m</div></div>
+      <div class="spec-item"><div class="spec-label">DEPTH RATING</div><div class="spec-value">500 m</div></div>
       <div class="spec-item"><div class="spec-label">CRUISE SPEED (AIR)</div><div class="spec-value">100+ mph</div></div>
       <div class="spec-item"><div class="spec-label">ENDURANCE</div><div class="spec-value">6+ hours (mixed-domain)</div></div>
       <div class="spec-item"><div class="spec-label">COMMUNICATIONS</div><div class="spec-value">RF (air) / Acoustic (subsurface)</div></div>
       <div class="spec-item"><div class="spec-label">AUTOPILOT</div><div class="spec-value">Custom flight controller + depth control</div></div>
+      <div class="spec-item"><div class="spec-label">SENSOR PAYLOAD</div><div class="spec-value">Multi-beam imaging sonar</div></div>
+      <div class="spec-item"><div class="spec-label">SENSOR PAYLOAD</div><div class="spec-value">DVL (Doppler Velocity Log)</div></div>
+      <div class="spec-item"><div class="spec-label">SENSOR PAYLOAD</div><div class="spec-value">USBL navigation</div></div>
+      <div class="spec-item"><div class="spec-label">SENSOR PAYLOAD</div><div class="spec-value">Hydrophone / passive acoustic array</div></div>
+      <div class="spec-item"><div class="spec-label">SENSOR PAYLOAD</div><div class="spec-value">EO/IR camera</div></div>
+      <div class="spec-item"><div class="spec-label">SENSOR PAYLOAD</div><div class="spec-value">LED illumination array</div></div>
     </div>
   </div>
 
@@ -95,6 +101,10 @@ import Layout from '../../layouts/Layout.astro';
         <div class="feature-title">Configuration C — Swarm node</div>
         <p class="feature-body">Network-enabled platform for distributed sensing and communication relay. Aerial units maintain RF mesh backbone; subsurface units extend coverage below surface. Autonomous handoff maintains network continuity through domain transitions.</p>
       </div>
+      <div class="feature-item">
+        <div class="feature-title">Configuration D — Subsea infrastructure ISR</div>
+        <p class="feature-body">Persistent surveillance of undersea cable routes, pipeline corridors, and seabed infrastructure. Multi-beam sonar maps cable burial transitions and repeater nodes; passive acoustic array collects signals intelligence along the route. Aerial transit delivers the platform to the area of interest; subsurface loiter conducts the survey autonomously. Data exfiltrated via RF burst on surface egress. No surface support vessel required.</p>
+      </div>
     </div>
   </div>
 
@@ -102,7 +112,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="feature-list">
       <div class="feature-item">
         <div class="feature-title">Operational deployment</div>
-        <p class="feature-body">MOA-J launches from a pneumatic tube or hand-launch for aerial deployment, or direct water insertion for subsurface start. Mission waypoints, depth profiles, and transition triggers are pre-programmed via ground control software. Once deployed, the platform operates fully autonomously — surfacing only for data exfiltration or operator-commanded abort. First full air-water-air transition demonstrated April 13, 2025. Subsurface endurance trials completed May 2025 with 200m depth validation. Swarm coordination testing (3+ units) ongoing as of Q1 2026.</p>
+        <p class="feature-body">MOA-J launches from a pneumatic tube or hand-launch for aerial deployment, or direct water insertion for subsurface start. Mission waypoints, depth profiles, and transition triggers are pre-programmed via ground control software. Once deployed, the platform operates fully autonomously — surfacing only for data exfiltration or operator-commanded abort.</p>
       </div>
     </div>
   </div>
