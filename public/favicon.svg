@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#000"/>
-  <!-- Geometric C arc -->
-  <path d="M21 9.5 A8.5 8.5 0 1 0 21 22.5" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round"/>
-  <!-- Terminal accent marks -->
-  <line x1="21" y1="9.5" x2="24" y2="9.5" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="21" y1="22.5" x2="24" y2="22.5" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
-</svg>
